@@ -1,0 +1,43 @@
+{
+    "Applicant Information": {
+        "Full Name": "John Doe",
+        "Date of Birth": "January 1, 1985",
+        "Social Security Number": "Provided on the form",
+        "Citizenship Status": "U.S. Citizen",
+        "Contact Information": {
+            "Address": "123 Market St, San Francisco, CA 94103",
+            "Phone Number": "555-123-4567",
+            "Email": "johndoe@email.com"
+        }
+    },
+    "Household Information": {
+        "Household Size": 1,
+        "Dependents": "None",
+        "Current Health Insurance": "None"
+    },
+    "Income Details": {
+        "Employment": "Software Engineer at TechCorp, Inc.",
+        "Annual Income": "$120,000",
+        "Income Frequency": "Bi-weekly"
+    },
+    "Health Information": {
+        "Disability": "None",
+        "Health Conditions": "None",
+        "Pregnancy Status": "Not Applicable"
+    },
+    "Insurance Information": {
+        "Current Health Coverage": "None",
+        "Note": "In a real application, if the employer offers health insurance but the applicant hasn\u2019t enrolled, details would be necessary here."
+    },
+    "Additional Information": {
+        "Other Benefits": "None",
+        "Available Job-related Health Insurance": "Yes, but not enrolled",
+        "Explanation": "Coverage to begin after probation period of 3 months."
+    },
+    "Signature and Consent": {
+        "Consent for Verification": "Checkbox marked",
+        "Acknowledgment of Rights and Responsibilities": "Checkbox marked",
+        "Signature of Applicant": "John Doe",
+        "Date": "Date of filling out the application"
+    }
+}

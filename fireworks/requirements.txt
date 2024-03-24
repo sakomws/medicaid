@@ -1,0 +1,10 @@
+
+llama-index
+llama-index-vector-stores-mongodb
+llama-index-embeddings-fireworks==0.1.2
+llama-index-llms-fireworks
+pymongo
+datasets
+pandas
+requests
+matplotlib

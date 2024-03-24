@@ -27,7 +27,7 @@ embed_model = FireworksEmbedding(
 )
 llm = Fireworks(
     temperature=0,
-    model="accounts/fireworks/models/mixtral-8x7b-instruct",
+    model="accounts/sahriyarm-b6065d/models/1bc4ef642865488692d371896b7aebc2",
     api_key=fw_api_key,
 )
 
@@ -37,6 +37,11 @@ Settings.embed_model = embed_model
 import json
 from llama_index.core import Document
 from llama_index.core.schema import MetadataMode
+from llama_index.core.node_parser import SentenceSplitter
+import pymongo
+import os
+from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
+from llama_index.core import VectorStoreIndex, StorageContext
 
 # Convert the DataFrame to a JSON string representation
 documents_json = dataset_df.to_json(orient="records")
@@ -74,7 +79,6 @@ for document in documents_list:
 
 llama_documents[0]
 
-from llama_index.core.node_parser import SentenceSplitter
 
 parser = SentenceSplitter()
 nodes = parser.get_nodes_from_documents(llama_documents)
@@ -90,8 +94,6 @@ for idx, n in enumerate(new_nodes):
     if "_id" in n.metadata:
         del n.metadata["_id"]
 
-import pymongo
-
 
 def get_mongo_client(mongo_uri):
     """Establish connection to the MongoDB."""
@@ -102,11 +104,6 @@ def get_mongo_client(mongo_uri):
     except pymongo.errors.ConnectionFailure as e:
         print(f"Connection failed: {e}")
         return None
-
-
-# set up Fireworks.ai Key
-import os
-import getpass
 
 mongo_uri = os.environ.get("MONGO_URI")
 if not mongo_uri:
@@ -121,7 +118,6 @@ db = mongo_client[DB_NAME]
 collection = db[COLLECTION_NAME]
 collection.delete_many({})
 
-from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
 
 vector_store = MongoDBAtlasVectorSearch(
     mongo_client,
@@ -130,8 +126,6 @@ vector_store = MongoDBAtlasVectorSearch(
     index_name="vector_index",
 )
 vector_store.add(new_nodes)
-
-from llama_index.core import VectorStoreIndex, StorageContext
 
 index = VectorStoreIndex.from_vector_store(vector_store)
 

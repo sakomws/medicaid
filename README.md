@@ -48,8 +48,8 @@ curl \
 
 
 ## Resources
-https://github.com/microsoft/presidio-research/blob/master/docs/requirements/industry/hipaa/source-material.md
-https://www.hipaajournal.com/hipaa-compliance-checklist
-https://github.com/a16z-infra/llm-app-stack/tree/main
-https://github.com/globerhofer/HIPAA-policies
-https://readme.fireworks.ai/docs/fine-tuning-models
+- https://github.com/microsoft/presidio-research/blob/master/docs/requirements/industry/hipaa/source-material.md
+- https://www.hipaajournal.com/hipaa-compliance-checklist
+- https://github.com/a16z-infra/llm-app-stack/tree/main
+- https://github.com/globerhofer/HIPAA-policies
+- https://readme.fireworks.ai/docs/fine-tuning-models

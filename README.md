@@ -1,6 +1,6 @@
 # Medicaid
 
-![architecture](./architecture.jpg "Medicaid Architecture")
+![architecture](./images/architecture.jpg "Medicaid Architecture")
 
 PHI stands for Protected Health Information and it includes data elements that can be used within a data set to identify an individual and disclose their medical records and/or health related financial history.
 
